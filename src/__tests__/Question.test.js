@@ -22,6 +22,7 @@ afterEach(() => {
 });
 
 // const onChange = jest.fn();
+
 test("creates an interval with setTimeout", () => {
   jest.spyOn(global, 'setTimeout');
   render(<Question question={testQuestion} onAnswered={noop} />);
@@ -62,3 +63,4 @@ test("clears the timeout after unmount", () => {
   unmount();
   expect(clearTimeout).toHaveBeenCalled();
 });
+
